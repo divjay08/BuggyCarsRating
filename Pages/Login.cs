@@ -29,8 +29,10 @@ namespace LearningProject.Pages
 
         private readonly By ProfileLink = By.XPath("//a[contains(.,'Profile')]");
 
+        private readonly By registerButton = By.XPath("//a[contains(text(),'Register')]");
 
         private readonly By validationerrormessageforLogin = By.XPath("//span[@class='label label-warning']");
+       
 
         //Login Page Methods
         public void CloseApplication()
@@ -53,6 +55,22 @@ namespace LearningProject.Pages
         {
             ClickOnElement(LoginButton);
         }
+
+        public void clearLoginField()
+        {
+            ClearElement(loginusernamefield);
+        }
+
+        public void clearPasswordField()
+        {
+            ClearElement(loginpasswordfield);
+        }
+
+        public void clickRegisterButton()
+        {
+            ClickOnElement(registerButton);
+        }
+
 
         public void Waitfor5seconds()
         {

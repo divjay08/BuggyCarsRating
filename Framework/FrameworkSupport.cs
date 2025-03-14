@@ -38,7 +38,7 @@ namespace LearningProject.Framework
             try
             {
                 element = _wait.Until(d =>
-                {
+                { 
                     element = d.FindElement(elementLocator);
                     if (element.Enabled && element.Displayed)
                     {
